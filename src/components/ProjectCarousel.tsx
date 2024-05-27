@@ -1,8 +1,8 @@
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-import 'swiper/css'; // Core Swiper CSS
-import 'swiper/css/navigation'; // Navigation CSS
-import { Navigation } from 'swiper/modules';
+import 'swiper/css'; // Import Swiper styles
+import 'swiper/css/navigation'; // Import Navigation styles
+import { Navigation } from 'swiper/modules'; // Correctly import Navigation module
 
 interface Project {
   title: string;
@@ -29,6 +29,14 @@ interface ProjectCarouselProps {
 }
 
 const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ onSlideChange }) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
   return (
     <div className="carousel-container">
       <Swiper

@@ -1,6 +1,6 @@
 import React, { RefObject } from 'react';
 import Link from 'next/link';
-import useActiveHash from '../hooks/useActiveHash'; // Adjust the path as needed
+import useActiveHash from '../hooks/useActiveHash';
 
 interface NavProps {
   aboutRef: RefObject<HTMLDivElement>;
