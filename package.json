@@ -11,14 +11,17 @@
   "dependencies": {
     "@next/react-refresh-utils": "^14.2.3",
     "@types/swiper": "^6.0.0",
+    "bootstrap": "^5.3.3",
     "css-loader": "^7.1.2",
     "next": "14.2.3",
     "postcss-loader": "^8.1.1",
     "react": "^18",
+    "react-bootstrap": "^2.10.2",
     "react-dom": "^18",
     "react-responsive-carousel": "^3.2.23",
     "sharp": "^0.33.4",
-    "style-loader": "^4.0.0"
+    "style-loader": "^4.0.0",
+    "vercel": "^32.3.0"
   },
   "devDependencies": {
     "@types/node": "20.12.12",

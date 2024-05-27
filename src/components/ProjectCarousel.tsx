@@ -1,53 +1,46 @@
-import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import { useState, useEffect } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 interface ProjectCarouselProps {
   onSlideChange: (index: number) => void;
 }
 
-const projectData = [
-  {
-    title: "Project A",
-    video: "/plog.mp4",
-  },
-  {
-    title: "Project B",
-    video: "/hopebabelikesmyorb.mp4",
-  },
-  {
-    title: "Project C",
-    video: "/videoGFX.mp4",
-  },
-];
+function ProjectCarousel({ onSlideChange }: ProjectCarouselProps) {
+  const [index, setIndex] = useState(0);
 
-const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ onSlideChange }) => {
-  const handleSlideChange = (index: number) => {
-    onSlideChange(index);
+  const handleSelect = (selectedIndex: number) => {
+    setIndex(selectedIndex);
+    onSlideChange(selectedIndex);
   };
 
   return (
-    <div className="carousel-container flex-1 p-6">
-      <Carousel
-        showThumbs={false}
-        onChange={handleSlideChange}
-        infiniteLoop
-        showStatus={false}
-        autoPlay={false}
-      >
-        {projectData.map((project, index) => (
-          <div key={index}>
-            <video controls className="carousel-video">
-              <source src={project.video} type="video/mp4" />
-              Your browser does not support the video tag.
+    <div className="carousel-container">
+      <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
+        <Carousel.Item>
+          <div className="video-wrapper">
+            <video className="carousel-video" controls>
+              <source src="/plog.mp4" type="video/mp4" />
             </video>
           </div>
-        ))}
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="video-wrapper">
+            <video className="carousel-video" controls>
+              <source src="/hopebabelikesmyorb.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="video-wrapper">
+            <video className="carousel-video" controls>
+              <source src="/videoGFX.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </Carousel.Item>
       </Carousel>
     </div>
   );
-};
+}
 
-export default React.memo(ProjectCarousel, (prevProps, nextProps) => {
-  return prevProps.onSlideChange === nextProps.onSlideChange;
-});
+export default ProjectCarousel;

@@ -41,10 +41,8 @@ export default function Home() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log(`Section ${entry.target.id} is intersecting`);
             entry.target.classList.add("visible");
           } else {
-            console.log(`Section ${entry.target.id} is not intersecting`);
             entry.target.classList.remove("visible");
           }
         });
@@ -56,7 +54,6 @@ export default function Home() {
 
     sections.forEach((section) => {
       if (section) {
-        console.log(`Observing section: ${section.id}`);
         observer.observe(section);
       }
     });
@@ -118,7 +115,7 @@ export default function Home() {
           <section
             id="carousel"
             ref={carouselRef}
-            className="section-projects-carousel fade-in"
+            className="section-projects-carousel"
           >
             <ProjectCarousel onSlideChange={setCurrentProjectIndex} />
           </section>

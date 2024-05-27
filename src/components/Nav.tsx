@@ -16,31 +16,31 @@ const Nav: React.FC<NavProps> = ({ aboutRef, educationRef, experienceRef, skills
   const isActive = (hash: string) => activeHash === hash;
 
   return (
-    <nav className="bg-header-bg shadow-md w-full fixed top-0 z-50">
+    <nav className="w-full">
       <ul className="flex justify-around p-4">
-        <li className={`hover:text-accent-color transition duration-300 ${isActive('#about') ? 'nav-link-active' : ''}`}>
+        <li className={`nav-item ${isActive('#about') ? 'nav-link-active' : ''}`}>
           <Link href="#about">
-            <span className={`nav-link ${isActive('#about') ? 'nav-link-active' : ''}`}>About</span>
+            <span className="nav-link">About</span>
           </Link>
         </li>
-        <li className={`hover:text-accent-color transition duration-300 ${isActive('#education') ? 'nav-link-active' : ''}`}>
+        <li className={`nav-item ${isActive('#education') ? 'nav-link-active' : ''}`}>
           <Link href="#education">
-            <span className={`nav-link ${isActive('#education') ? 'nav-link-active' : ''}`}>Education</span>
+            <span className="nav-link">Education</span>
           </Link>
         </li>
-        <li className={`hover:text-accent-color transition duration-300 ${isActive('#experience') ? 'nav-link-active' : ''}`}>
+        <li className={`nav-item ${isActive('#experience') ? 'nav-link-active' : ''}`}>
           <Link href="#experience">
-            <span className={`nav-link ${isActive('#experience') ? 'nav-link-active' : ''}`}>Experience</span>
+            <span className="nav-link">Experience</span>
           </Link>
         </li>
-        <li className={`hover:text-accent-color transition duration-300 ${isActive('#skills') ? 'nav-link-active' : ''}`}>
+        <li className={`nav-item ${isActive('#skills') ? 'nav-link-active' : ''}`}>
           <Link href="#skills">
-            <span className={`nav-link ${isActive('#skills') ? 'nav-link-active' : ''}`}>Skills</span>
+            <span className="nav-link">Skills</span>
           </Link>
         </li>
-        <li className={`hover:text-accent-color transition duration-300 ${isActive('#contact') ? 'nav-link-active' : ''}`}>
+        <li className={`nav-item ${isActive('#contact') ? 'nav-link-active' : ''}`}>
           <Link href="#contact">
-            <span className={`nav-link ${isActive('#contact') ? 'nav-link-active' : ''}`}>Contact</span>
+            <span className="nav-link">Contact</span>
           </Link>
         </li>
       </ul>
