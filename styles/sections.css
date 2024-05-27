@@ -162,6 +162,10 @@
   align-items: flex-start; /* Align items at the top */
 }
 
+.about-bg {
+  background-color: var(--section-bg);
+}
+
 .headshot-container {
   width: 500px; /* Increase the width as needed */
   height: auto;
