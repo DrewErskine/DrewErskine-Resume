@@ -1,5 +1,3 @@
-import path from 'path';
-
 const nextConfig = {
   reactStrictMode: true,
   webpack: (config, { isServer }) => {
