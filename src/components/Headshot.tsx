@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import './sections.css'; // Ensure this file is imported for the styles
+import '../../styles/sections.css'; // Adjust the path to your CSS file
 import profileImage from '/public/headshot.jpg'; // Update the path to your image
 
 const Headshot: React.FC = () => {
@@ -9,8 +9,8 @@ const Headshot: React.FC = () => {
       <Image 
         src={profileImage} 
         alt="Profile" 
-        width={150} // Set the actual width of the image
-        height={150} // Set the actual height of the image
+        width={2316} // Set the actual width of the image
+        height={3088} // Set the actual height of the image
         className="profile-image-sidebar" 
       />
     </div>

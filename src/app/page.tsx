@@ -80,13 +80,19 @@ export default function Home() {
         contactRef={contactRef}
       />
       <main className="flex-1 w-full pt-16 p-6">
-        <section
-          id="about"
-          ref={aboutRef}
-          className="section about-section fade-in"
-        >
-          <About />
+        <section className="section name-section">
+          <h1 className="name-title">Drew Erskine</h1>
         </section>
+        <div className="about-and-headshot-container">
+          <section
+            id="about"
+            ref={aboutRef}
+            className="section about-section fade-in"
+          >
+            <About />
+          </section>
+          <Headshot />
+        </div>
         <section
           id="education"
           ref={educationRef}
