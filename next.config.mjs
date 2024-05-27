@@ -1,7 +1,12 @@
+// next.config.mjs
+import path from 'path';
+
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    unoptimized: false, // Ensure images are optimized by Next.js
+  },
   webpack: (config, { isServer }) => {
-    // Add CSS support for CSS modules
     config.module.rules.push({
       test: /\.css$/,
       use: [
