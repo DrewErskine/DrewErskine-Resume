@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import { Carousel } from "react-responsive-carousel";
 
 interface ProjectCarouselProps {
   onSlideChange: (index: number) => void;
@@ -10,16 +10,16 @@ interface ProjectCarouselProps {
 const projectData = [
   {
     title: "Project A",
-    video: "/projects/plog.mp4"
+    video: "/projects/plog.mp4",
   },
   {
     title: "Project B",
-    video: "/projects/hopebabelikesmyorb.mp4"
+    video: "/projects/hopebabelikesmyorb.mp4",
   },
   {
     title: "Project C",
-    video: "/projects/videoGFX.mp4"
-  }
+    video: "/projects/videoGFX.mp4",
+  },
 ];
 
 const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ onSlideChange }) => {
@@ -29,11 +29,11 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ onSlideChange }) => {
 
   return (
     <div className="carousel-container flex-1 p-6">
-      <Carousel 
-        showThumbs={false} 
-        onChange={handleSlideChange} 
-        infiniteLoop 
-        showStatus={false} 
+      <Carousel
+        showThumbs={false}
+        onChange={handleSlideChange}
+        infiniteLoop
+        showStatus={false}
         autoPlay={false}
       >
         {projectData.map((project, index) => (
