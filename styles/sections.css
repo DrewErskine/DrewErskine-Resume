@@ -1,0 +1,179 @@
+/* styles/sections.css */
+.section {
+  padding: 3rem; /* Increased padding */
+  margin: 3rem auto; /* Increased margin */
+  width: calc(
+    100% - var(--left-margin)
+  ); /* Adjust width based on left margin */
+  max-width: 1200px; /* Limit the maximum width */
+  border: 4px solid;
+  border-radius: 8px;
+  background-color: var(--section-bg);
+  margin-left: var(--left-margin); /* Apply left margin */
+}
+
+.section-content {
+  font-size: 1.125rem; /* Slightly larger font size */
+  line-height: 1.6; /* Better line spacing */
+  color: var(--secondary-text); /* Adjust the color as needed */
+  font-weight: bold; /* Optional: Make the text bold */
+  padding: 0;
+  margin: 0;
+  width: 80%; /* Take up 80% of the width */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+}
+
+.section-title {
+  text-decoration: underline;
+  font-size: 2.5rem; /* Increase font size */
+  font-weight: bold;
+  margin-bottom: 1.5rem; /* Add more space below title */
+  text-decoration-color: var(--secondary-color);
+}
+
+.section:nth-child(1) {
+  --left-margin: 0vw;
+}
+
+.section:nth-child(2) {
+  --left-margin: calc(var(--step-indent) * 1);
+}
+
+.section:nth-child(3) {
+  --left-margin: calc(var(--step-indent) * 2);
+}
+
+.section:nth-child(4) {
+  --left-margin: calc(var(--step-indent) * 3);
+}
+
+.section:nth-child(5) {
+  --left-margin: calc(var(--step-indent) * 4);
+}
+
+/* Special style for Contact section */
+.contact {
+  width: 80%; /* Take up 80% of the width */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+}
+
+/* Add these to globals.css or an appropriate CSS file */
+.fade-in {
+  opacity: 0.145; /* Slightly reduce opacity for fade-in effect */
+  transform: translateY(25px);
+  transition: opacity 0.8s ease-in, transform 0.6s ease-in;
+}
+
+.fade-in.visible {
+  opacity: 1; /* Full opacity when visible */
+  transform: translateY(0);
+}
+
+/* Carousel Styles */
+.carousel-container {
+  margin-top: 75px;
+  padding: 2rem; /* Added padding to match the section */
+  margin: 0rem auto; /* Adjusted margin */
+  width: 100%; /* Set a fixed width for equal sizing */
+  max-width: 1080px; /* Smaller maximum width */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+  background-color: var(--section-bg2);
+}
+
+.carousel-video {
+  width: 100%;
+  border-radius: 18px;
+}
+
+/* Flex container for projects and carousel */
+.projects-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.skills-certifications-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Ensure sections have the same height */
+  gap: 2rem; /* Add space between sections */
+  max-width: 1200px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container */
+  margin-top: 50px;
+  padding: 2rem; /* Add padding to the sides of the container */
+}
+
+.half-section {
+  flex: 1; /* Ensure both sections take up equal space */
+  max-width: 100%; /* Set width to make sections wider */
+  display: flex;
+  flex-direction: column; /* Ensure content inside can stretch */
+  padding: 1rem;
+  background-color: var(--section-bg);
+}
+
+/* Certifications text styles */
+.section-text {
+  font-size: 1.125rem; /* Slightly larger font size */
+  line-height: 1.6; /* Better line spacing */
+  color: var(--primary-text); /* Ensure text color is set */
+  padding: 0;
+  margin: 0;
+  list-style-type: none; /* Remove default list styling */
+}
+
+.section-text li {
+  margin-bottom: 1rem; /* Space between list items */
+}
+
+.section-text h3 {
+  font-size: 1.5rem; /* Adjusted font size for better readability */
+  font-weight: 600; /* Make the text bold */
+  margin: 0; /* Remove default margins */
+}
+
+/* Component-specific styles */
+.about-section {
+  background-color: var(--section-bg1);
+}
+
+.education-section {
+  background-color: var(--section-bg2);
+}
+
+.experience-section {
+  background-color: var(--section-bg3);
+}
+
+.projects-section {
+  background-color: var(--section-bg2);
+}
+
+.skills-section,
+.certifications-section {
+  background-color: var(--section-bg3);
+}
+
+.sectionContact {
+  background-color: var(--section-bgvoid);
+  padding: 2rem; /* Add padding to the sides of the container */
+  border-radius: 18px;
+}
+
+.content-with-sidebar {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem; /* Adjust the gap as needed */
+}
+
+.profile-image-sidebar {
+  width: 150px; /* Adjust the width as needed */
+  height: auto;
+  margin-top: 3rem; /* Adjust the top margin as needed */
+  position: sticky; /* Keeps the image fixed as you scroll */
+  top: 20px; /* Adjust the top position as needed */
+}

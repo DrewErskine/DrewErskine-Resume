@@ -1,0 +1,16 @@
+/* nav.css */
+.nav-link {
+  color: var(--primary-text);
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: rgb(var(--secondary-color));
+}
+
+.nav-link-active {
+  background-color: rgb(var(--primary-color));
+  color: var(--primary-text); /* Ensure the text color is readable */
+}
