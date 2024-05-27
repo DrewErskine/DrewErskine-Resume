@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 interface ProjectCarouselProps {
@@ -10,15 +9,15 @@ interface ProjectCarouselProps {
 const projectData = [
   {
     title: "Project A",
-    video: "/projects/plog.mp4",
+    video: "/plog.mp4",
   },
   {
     title: "Project B",
-    video: "/projects/hopebabelikesmyorb.mp4",
+    video: "/hopebabelikesmyorb.mp4",
   },
   {
     title: "Project C",
-    video: "/projects/videoGFX.mp4",
+    video: "/videoGFX.mp4",
   },
 ];
 
