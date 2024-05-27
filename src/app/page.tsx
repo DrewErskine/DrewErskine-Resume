@@ -10,9 +10,9 @@ import Contact from "../components/Contact";
 import Projects from "../components/Projects";
 import ProjectCarousel from "../components/ProjectCarousel";
 import Headshot from "../components/Headshot";
-import "../../styles/globals.css";
-import "../../styles/nav.css";
-import "../../styles/sections.css";
+import "../styles/globals.css";
+import "../styles/nav.css";
+import "../styles/sections.css";
 
 export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null);

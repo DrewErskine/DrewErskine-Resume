@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import '../../styles/sections.css'; // Adjust the path to your CSS file
+import '../styles/sections.css'; // Adjust the path to your CSS file
 import profileImage from '/public/headshot.jpg'; // Update the path to your image
 
 const Headshot: React.FC = () => {

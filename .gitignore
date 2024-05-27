@@ -112,3 +112,5 @@ pnpm-debug.log
 # VS Code
 .vscode/
 .history/
+
+.vercel
