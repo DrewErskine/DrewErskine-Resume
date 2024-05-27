@@ -7,7 +7,7 @@ const Contact = () => {
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setFormState({ ...formState, [name]: value });
-    setErrors({ ...errors, [name]: '' }); // Clear errors on change
+    setErrors({ ...errors, [name]: '' }); 
   };
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {

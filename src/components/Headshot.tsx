@@ -11,6 +11,7 @@ const Headshot: React.FC = () => {
         alt="Profile" 
         width={2316} // Set the actual width of the image
         height={3088} // Set the actual height of the image
+        priority // This tells Next.js to prioritize the loading of this image
         className="profile-image-sidebar" 
       />
     </div>
