@@ -1,8 +1,11 @@
-// next.config.mjs
 import path from 'path';
 
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
   webpack: (config, { isServer }) => {
     // Add CSS support for CSS modules
     config.module.rules.push({
