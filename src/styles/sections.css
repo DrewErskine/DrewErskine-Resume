@@ -67,13 +67,19 @@
 }
 
 .carousel-container {
-  /* existing styles */
-  overflow: hidden; /* New style to ensure Swiper displays correctly */
+  margin-top: 75px;
+  padding: 2rem; /* Added padding to match the section */
+  margin: 0rem auto; /* Adjusted margin */
+  width: 100%; /* Set a fixed width for equal sizing */
+  max-width: 1080px; /* Smaller maximum width */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+  background-color: var(--section-bg2);
 }
 
 .carousel-video {
-  width: 100%; /* Adjust based on your design */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  border-radius: 18px;
 }
 
 .projects-carousel-container {
@@ -186,18 +192,4 @@
   font-size: 3rem; /* Adjust font size as needed */
   font-weight: bold;
   color: var(--primary-text);
-}
-
-.carousel-container {
-  overflow: hidden; /* Ensure Swiper displays correctly */
-}
-
-.carousel-video {
-  width: 100%; /* Adjust based on your design */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.swiper {
-  width: 600px; /* Adjust size as needed */
-  height: 300px; /* Adjust size as needed */
 }

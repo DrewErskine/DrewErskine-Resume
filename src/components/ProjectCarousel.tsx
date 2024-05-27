@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css'; // Import Swiper styles
-import 'swiper/css/navigation'; // Import Navigation styles
-import { Navigation } from 'swiper/modules'; // Correctly import Navigation module
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
-interface Project {
-  title: string;
-  video: string;
+interface ProjectCarouselProps {
+  onSlideChange: (index: number) => void;
 }
 
-const projectData: Project[] = [
+const projectData = [
   {
     title: "Project A",
     video: "/projects/plog.mp4"
@@ -24,38 +22,33 @@ const projectData: Project[] = [
   }
 ];
 
-interface ProjectCarouselProps {
-  onSlideChange: (index: number) => void;
-}
-
 const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ onSlideChange }) => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) return null;
+  const handleSlideChange = (index: number) => {
+    onSlideChange(index);
+  };
 
   return (
-    <div className="carousel-container">
-      <Swiper
-        modules={[Navigation]} // Explicitly pass the Navigation module
-        navigation={true} // Enable navigation arrows
-        loop={true} // Enable looping
-        onSlideChange={(swiper) => onSlideChange(swiper.activeIndex)}
+    <div className="carousel-container flex-1 p-6">
+      <Carousel 
+        showThumbs={false} 
+        onChange={handleSlideChange} 
+        infiniteLoop 
+        showStatus={false} 
+        autoPlay={false}
       >
         {projectData.map((project, index) => (
-          <SwiperSlide key={index}>
+          <div key={index}>
             <video controls className="carousel-video">
               <source src={project.video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-          </SwiperSlide>
+          </div>
         ))}
-      </Swiper>
+      </Carousel>
     </div>
   );
 };
 
-export default ProjectCarousel;
+export default React.memo(ProjectCarousel, (prevProps, nextProps) => {
+  return prevProps.onSlideChange === nextProps.onSlideChange;
+});
