@@ -116,7 +116,7 @@ export default function Home() {
           <section
             id="carousel"
             ref={carouselRef}
-            className="section-projects-carousel fade-in"
+            className="section-projects-carousel"
           >
             <ProjectCarousel onSlideChange={setCurrentProjectIndex} />
           </section>
