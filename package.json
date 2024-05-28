@@ -8,12 +8,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "postbuild": "touch out/.nojekyll",
     "format": "prettier --write .",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@next/react-refresh-utils": "^14.2.3",
     "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
     "next": "14.2.3",
     "postcss-loader": "^8.1.1",
     "react": "^18",
