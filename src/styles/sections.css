@@ -186,10 +186,10 @@
 /* Container for the about section and headshot */
 .about-and-headshot-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: nowrap;
   padding: 2rem;
-  padding-right: 20rem;
+  gap: 2rem; /* Add gap between the about section and the headshot */
 }
 
 /* Background color for the about section */
