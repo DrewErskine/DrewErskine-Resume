@@ -10,12 +10,6 @@ const nextConfig = {
     unoptimized: true, // Disable image optimization for static export
   },
   output: 'export',
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.devtool = 'source-map'; // Enable source maps in development
-    }
-    return config;
-  },
 };
 
 export default nextConfig;
