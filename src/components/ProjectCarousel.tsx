@@ -1,7 +1,7 @@
-// src/components/ProjectCarousel.tsx
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/carousel.css';
 
 interface ProjectCarouselProps {
   onSlideChange: (index: number) => void;
@@ -15,8 +15,7 @@ function ProjectCarousel({ onSlideChange }: ProjectCarouselProps) {
     onSlideChange(selectedIndex);
   };
 
-  // Use process.env.PUBLIC_URL for the correct base path in production
-  const basePath = process.env.PUBLIC_URL;
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   return (
     <div className="carousel-container">

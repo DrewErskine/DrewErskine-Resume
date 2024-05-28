@@ -122,18 +122,10 @@ export default function Home() {
           </section>
         </div>
         <div className="skills-certifications-container">
-          <section
-            id="skills"
-            ref={skillsRef}
-            className="section half-section skills-section fade-in"
-          >
+          <section id="skills" ref={skillsRef} className="section half-section skills-section fade-in">
             <Skills />
           </section>
-          <section
-            id="certifications"
-            ref={certificationsRef}
-            className="section half-section certifications-section fade-in"
-          >
+          <section id="certifications" ref={certificationsRef} className="section half-section certifications-section fade-in">
             <Certifications />
           </section>
         </div>

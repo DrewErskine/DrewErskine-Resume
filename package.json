@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@next/react-refresh-utils": "^14.2.3",
@@ -30,7 +32,8 @@
     "eslint-config-next": "14.2.3",
     "gh-pages": "^6.1.1",
     "postcss": "^8.4.38",
+    "prettier": "^2.8.8",
     "tailwindcss": "^3.4.3",
-    "typescript": "5.4.5"
+    "typescript": "latest"
   }
 }

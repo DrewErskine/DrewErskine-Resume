@@ -1,0 +1,23 @@
+/* creds.css */
+
+/* Section text styling */
+.skills-text,
+.certifications-text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--primary-text);
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  list-style-type: disc;
+  padding-left: 20px; /* Indent bullet points */
+}
+
+
+
+.skills-text li,
+.certifications-text li {
+  margin-bottom: 1rem;
+  display: list-item; /* Ensure each item starts on a new line */
+  list-style-position: inside; /* Ensure the bullets are inside the container */
+}

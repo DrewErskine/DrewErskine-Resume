@@ -1,0 +1,31 @@
+/* carousel.css */
+
+/* Carousel container styling */
+.carousel-container {
+    margin-top: 75px;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1234px;
+    height: 717px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--section-bg2);
+    overflow: hidden;
+  }
+  
+  /* Carousel video styling */
+  .carousel-video {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+  }
+  
+  /* Projects carousel container styling */
+  .projects-carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
