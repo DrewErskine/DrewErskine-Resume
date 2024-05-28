@@ -79,10 +79,10 @@
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
-  max-width: 1200px;
-  width: 100%;
+  width: 75%;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 25px;
+  margin-bottom: 200px;
   padding: 2rem;
 }
 
@@ -97,25 +97,6 @@
   box-sizing: border-box;
 }
 
-/* Section text styling */
-.skills-text,
-.certifications-text {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: var(--primary-text);
-  font-weight: bold;
-  padding: 0;
-  margin: 0;
-  list-style-type: disc;
-  padding-left: 20px; /* Indent bullet points */
-}
-
-.skills-text li,
-.certifications-text li {
-  margin-bottom: 1rem;
-  display: list-item; /* Ensure each item starts on a new line */
-  list-style-position: inside;
-}
 
 /* Specific section background colors */
 .about-section {
