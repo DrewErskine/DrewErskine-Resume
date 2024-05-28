@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+// src/components/ProjectCarousel.tsx
+import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -21,6 +22,7 @@ function ProjectCarousel({ onSlideChange }: ProjectCarouselProps) {
           <div className="video-wrapper">
             <video className="carousel-video" controls>
               <source src="/plog.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
             </video>
           </div>
         </Carousel.Item>
@@ -28,6 +30,7 @@ function ProjectCarousel({ onSlideChange }: ProjectCarouselProps) {
           <div className="video-wrapper">
             <video className="carousel-video" controls>
               <source src="/hopebabelikesmyorb.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
             </video>
           </div>
         </Carousel.Item>
@@ -35,6 +38,7 @@ function ProjectCarousel({ onSlideChange }: ProjectCarouselProps) {
           <div className="video-wrapper">
             <video className="carousel-video" controls>
               <source src="/videoGFX.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
             </video>
           </div>
         </Carousel.Item>
