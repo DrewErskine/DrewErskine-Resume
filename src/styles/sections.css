@@ -154,6 +154,7 @@
 /* Specific section background colors */
 .about-section {
   background-color: var(--section-bg1);
+  padding-right: 2%;
 }
 
 .education-section {
