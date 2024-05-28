@@ -13,6 +13,7 @@ import Headshot from "../components/Headshot";
 import "../styles/globals.css";
 import "../styles/nav.css";
 import "../styles/sections.css";
+import "../styles/headshot.css"; // Import the new CSS file
 
 export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -115,7 +116,7 @@ export default function Home() {
           <section
             id="carousel"
             ref={carouselRef}
-            className="section-projects-carousel"
+            className="section-projects-carousel fade-in"
           >
             <ProjectCarousel onSlideChange={setCurrentProjectIndex} />
           </section>

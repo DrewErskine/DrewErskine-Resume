@@ -1,0 +1,34 @@
+/* headshot.css */
+
+/* Styling for the headshot container */
+.headshot-container {
+  flex: 0 0 30%;
+  height: auto;
+  border-radius: 8px;
+  background-color: var(--section-bg2);
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the headshot image fits well within the container */
+.profile-image-sidebar {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .headshot-container {
+    flex: 0 0 5%;
+    margin-right: 5%;
+  }
+}
+
+/* Media query for extra large screens */
+@media (min-width: 1200px) {
+  .headshot-container {
+    flex: 0 0 25%;
+  }
+}

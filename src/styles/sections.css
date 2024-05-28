@@ -1,34 +1,37 @@
+/* sections.css */
+
+/* General section styling */
 .section {
-  padding: 3rem; /* Increased padding */
-  margin: 3rem auto; /* Increased margin */
-  width: calc(100% - var(--left-margin)); /* Adjust width based on left margin */
-  max-width: 1200px; /* Limit the maximum width */
+  padding: 3rem;
+  margin: 3rem auto;
+  width: calc(100% - var(--left-margin));
+  max-width: 1200px;
   border: 4px solid;
   border-radius: 8px;
   background-color: var(--section-bg);
-  margin-left: var(--left-margin); /* Apply left margin */
+  margin-left: var(--left-margin);
 }
 
+/* Section content styling */
 .section-content {
-  font-size: 1.125rem; /* Slightly larger font size */
-  line-height: 1.6; /* Better line spacing */
-  color: var(--secondary-text); /* Adjust the color as needed */
-  font-weight: bold; /* Optional: Make the text bold */
-  padding: 0;
-  margin: 0;
-  width: 80%; /* Take up 80% of the width */
-  margin-left: auto; /* Center horizontally */
-  margin-right: auto; /* Center horizontally */
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--secondary-text);
+  font-weight: bold;
+  width: 80%;
+  margin: 0 auto;
 }
 
+/* Section title styling */
 .section-title {
   text-decoration: underline;
-  font-size: 2.5rem; /* Increase font size */
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 1.5rem; /* Add more space below title */
+  margin-bottom: 1.5rem;
   text-decoration-color: var(--secondary-color);
 }
 
+/* Left margin for specific sections */
 .section:nth-child(1) {
   --left-margin: 0vw;
 }
@@ -49,42 +52,46 @@
   --left-margin: calc(var(--step-indent) * 4);
 }
 
+/* Contact section styling */
 .contact {
   width: 150%;
-  margin-left: auto; /* Center horizontally */
-  margin-right: auto; /* Center horizontally */
+  margin: 0 auto;
 }
 
+/* Fade-in animation styling */
 .fade-in {
-  opacity: 0.145; /* Slightly reduce opacity for fade-in effect */
+  opacity: 0.145;
   transform: translateY(25px);
   transition: opacity 0.8s ease-in, transform 0.6s ease-in;
 }
 
 .fade-in.visible {
-  opacity: 1; /* Full opacity when visible */
+  opacity: 1;
   transform: translateY(0);
 }
 
+/* Carousel container styling */
 .carousel-container {
   margin-top: 75px;
-  padding: 2rem; /* Match section padding */
-  margin: 0 auto; /* Center the carousel */
-  width: 1234px; /* Fixed width */
-  height: 717px; /* Fixed height */
+  padding: 2rem;
+  margin: 0 auto;
+  width: 1234px;
+  height: 717px;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for visual effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: var(--section-bg2);
-  overflow: hidden; /* Ensure content does not overflow */
+  overflow: hidden;
 }
 
+/* Carousel video styling */
 .carousel-video {
   width: 100%;
   height: 100%;
   border-radius: 18px;
-  object-fit: cover; /* Ensure the video covers the entire area */
+  object-fit: cover;
 }
 
+/* Project details styling */
 .project-details {
   background-color: var(--section-bg);
   padding: 1rem;
@@ -92,6 +99,7 @@
   margin-top: 1rem;
 }
 
+/* Projects carousel container styling */
 .projects-carousel-container {
   display: flex;
   justify-content: center;
@@ -99,48 +107,53 @@
   gap: 2rem;
 }
 
+/* Skills and certifications container styling */
 .skills-certifications-container {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Ensure sections have the same height */
-  gap: 2rem; /* Add space between sections */
-  max-width: 1200px; /* Set a maximum width for the container */
-  margin: 0 auto; /* Center the container */
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
   margin-top: 50px;
-  padding: 2rem; /* Add padding to the sides of the container */
+  padding: 2rem;
 }
 
+/* Half section styling */
 .half-section {
-  flex: 1; /* Ensure both sections take up equal space */
-  max-width: 100%; /* Set width to make sections wider */
+  flex: 1;
+  max-width: 100%;
   display: flex;
-  flex-direction: column; /* Ensure content inside can stretch */
+  flex-direction: column;
   padding: 1rem;
   background-color: var(--section-bg);
 }
 
+/* Section text styling */
 .section-text {
-  font-size: 1.125rem; /* Slightly larger font size */
-  line-height: 1.6; /* Better line spacing */
-  color: var(--primary-text); /* Ensure text color is set */
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--primary-text);
   padding: 0;
   margin: 0;
-  list-style-type: none; /* Remove default list styling */
+  list-style-type: none;
 }
 
+/* Section text list item styling */
 .section-text li {
-  margin-bottom: 1rem; /* Space between list items */
+  margin-bottom: 1rem;
 }
 
+/* Section text header styling */
 .section-text h3 {
-  font-size: 1.5rem; /* Adjusted font size for better readability */
-  font-weight: 600; /* Make the text bold */
-  margin: 0; /* Remove default margins */
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
 }
 
+/* Specific section background colors */
 .about-section {
   background-color: var(--section-bg1);
-  margin-top: 5%;
 }
 
 .education-section {
@@ -161,46 +174,46 @@
   background-color: var(--section-bg3);
 }
 
+/* Contact section container styling */
 .sectionContact {
   width: 100%;
-  padding: 2rem; /* Add padding to the sides of the container */
+  padding: 2rem;
   background-color: var(--section-bgvoid);
-  border-radius: 0; /* Remove border-radius to make it stretch edge to edge */
-  margin: 0; /* Remove margin to make it stretch edge to edge */
+  border-radius: 0;
+  margin: 0;
 }
+
+/* Container for the about section and headshot */
 .about-and-headshot-container {
   display: flex;
-  align-items: flex-start; /* Align items at the top */
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
+/* Background color for the about section */
 .about-bg {
   background-color: var(--section-bg);
+  flex: 1;
+  min-width: 0;
 }
 
-.headshot-container {
-  width: 500px; /* Increase the width as needed */
-  height: auto;
-  border-radius: 8px;
-  background-color: var(--section-bg2); /* Match the background color */
-  padding: 1rem; /* Add padding for better spacing */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  margin-top: 2%;
-  margin-right: 15%;
-}
-
+/* Name section styling */
 .name-section {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
   margin-bottom: 1rem;
-  background-color: var(--section-bg); /* Match background color */
+  background-color: var(--section-bg);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Name title styling */
 .name-title {
-  font-size: 3rem; /* Adjust font size as needed */
+  font-size: 3rem;
   font-weight: bold;
   color: var(--primary-text);
 }
