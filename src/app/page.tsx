@@ -77,7 +77,7 @@ export default function Home() {
         skillsRef={skillsRef}
         contactRef={contactRef}
       />
-      <main className="flex-1 w-full pt-16 p-6">
+      <main className="flex-1 w-full pt-16 p-12">
         <section className="section name-section">
           <h1 className="name-title">Drew Erskine</h1>
         </section>

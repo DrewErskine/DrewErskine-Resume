@@ -154,7 +154,6 @@
 /* Specific section background colors */
 .about-section {
   background-color: var(--section-bg1);
-  padding-right: 2%;
 }
 
 .education-section {
@@ -190,7 +189,7 @@
   align-items: flex-start;
   flex-wrap: nowrap;
   padding: 2rem;
-  margin-bottom: 2rem;
+  padding-right: 20rem;
 }
 
 /* Background color for the about section */
