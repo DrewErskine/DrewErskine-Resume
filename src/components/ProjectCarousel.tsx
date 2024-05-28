@@ -15,13 +15,16 @@ function ProjectCarousel({ onSlideChange }: ProjectCarouselProps) {
     onSlideChange(selectedIndex);
   };
 
+  // Use process.env.PUBLIC_URL for the correct base path in production
+  const basePath = process.env.PUBLIC_URL;
+
   return (
     <div className="carousel-container">
       <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
         <Carousel.Item>
           <div className="video-wrapper">
             <video className="carousel-video" controls>
-              <source src="/plog.mp4" type="video/mp4" />
+              <source src={`${basePath}/plog.mp4`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -29,7 +32,7 @@ function ProjectCarousel({ onSlideChange }: ProjectCarouselProps) {
         <Carousel.Item>
           <div className="video-wrapper">
             <video className="carousel-video" controls>
-              <source src="/hopebabelikesmyorb.mp4" type="video/mp4" />
+              <source src={`${basePath}/hopebabelikesmyorb.mp4`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -37,7 +40,7 @@ function ProjectCarousel({ onSlideChange }: ProjectCarouselProps) {
         <Carousel.Item>
           <div className="video-wrapper">
             <video className="carousel-video" controls>
-              <source src="/videoGFX.mp4" type="video/mp4" />
+              <source src={`${basePath}/videoGFX.mp4`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
