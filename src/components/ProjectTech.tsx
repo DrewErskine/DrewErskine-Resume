@@ -1,7 +1,7 @@
 import '../styles/carousel.css'; // Assuming you are using the same CSS file
 
 
-interface ProjectsProps {
+interface ProjectTechProps {
   currentProjectIndex: number;
 }
 
@@ -23,15 +23,14 @@ const projectDetails = [
   }
 ];
 
-function Projects({ currentProjectIndex }: ProjectsProps) {
+function Projects({ currentProjectIndex }: ProjectTechProps) {
   const project = projectDetails[currentProjectIndex];
 
   return (
     <div className="section project-container">
-      <h2 className="section-title">Projects</h2>
+      <h2 className="section-title"> Specifics</h2>
       <div className="project-details">
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
+        <p><strong>Technologies:</strong> {project.technologies}</p>
       </div>
     </div>
   );

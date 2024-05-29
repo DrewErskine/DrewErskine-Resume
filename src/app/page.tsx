@@ -8,6 +8,7 @@ import Skills from "../components/Skills";
 import Certifications from "../components/Certifications";
 import Contact from "../components/Contact";
 import Projects from "../components/Projects";
+import ProjectTech from "../components/ProjectTech";
 import ProjectCarousel from "../components/ProjectCarousel";
 import Headshot from "../components/Headshot";
 import "../styles/globals.css";
@@ -21,6 +22,7 @@ export default function Home() {
   const educationRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
+  const projectTechRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
   const certificationsRef = useRef<HTMLDivElement>(null);
@@ -33,6 +35,7 @@ export default function Home() {
       educationRef.current,
       experienceRef.current,
       projectsRef.current,
+      projectTechRef.current,
       carouselRef.current,
       skillsRef.current,
       certificationsRef.current,
@@ -108,7 +111,7 @@ export default function Home() {
         </section>
         <Projects currentProjectIndex={currentProjectIndex} />
         <div className="projects-carousel-container">
-          <Projects currentProjectIndex={currentProjectIndex} />
+          <ProjectTech currentProjectIndex={currentProjectIndex} />
           <ProjectCarousel onSlideChange={setCurrentProjectIndex} />
         </div>
 

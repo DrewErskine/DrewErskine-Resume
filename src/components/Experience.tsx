@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Experience = () => {
   return (
     <section className="section">
@@ -7,22 +8,13 @@ const Experience = () => {
       <div className="section-content">
         <ul>
           <li>
-            <strong>Company A</strong>
-            <p>Position: Full Stack Developer</p>
-            <p>Duration: Jan 2021 - Present</p>
-            <ul>
-              <li>Developed and maintained web applications using React and Node.js.</li>
-              <li>Implemented RESTful APIs and integrated third-party services.</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Company B</strong>
-            <p>Position: Frontend Developer</p>
-            <p>Duration: Jun 2019 - Dec 2020</p>
-            <ul>
-              <li>Designed and developed user interfaces using React and Redux.</li>
-              <li>Collaborated with backend developers to integrate APIs.</li>
-            </ul>
+            <h2><strong>Michigan High School Esports Federation</strong></h2>
+            <h3>Position: Full Stack Developer Intern</h3>
+            <li>
+              <p>-Developed and maintained full-stack solutions for MIHSEF, enhancing user experience and platform functionality based on user feedback and performance metrics. </p>
+              <p>-Designed and implemented RESTful API web services using the Java Spring framework, fit effectively for handling data operation during competitive esports events. </p>
+              <p>-Built over 10 scaffolding tools utilizing a variety of programming languages including Java, JS, C, C#, HTML and Python, which streamlined development processes and improved efficiency.  </p>
+            </li>
           </li>
         </ul>
       </div>
