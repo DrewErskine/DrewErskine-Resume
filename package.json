@@ -10,8 +10,7 @@
     "lint": "next lint",
     "postbuild": "touch out/.nojekyll",
     "format": "prettier --write .",
-    "type-check": "tsc --noEmit",
-    "deploy": "gh-pages -d out"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@next/react-refresh-utils": "^14.2.3",
@@ -23,6 +22,7 @@
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18",
     "react-responsive-carousel": "^3.2.23",
+    "react-youtube": "^10.1.0",
     "sharp": "^0.33.4",
     "vercel": "^32.3.0"
   },

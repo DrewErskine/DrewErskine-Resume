@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import YouTube from 'react-youtube';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/carousel.css';
 
@@ -15,33 +16,30 @@ function ProjectCarousel({ onSlideChange }: ProjectCarouselProps) {
     onSlideChange(selectedIndex);
   };
 
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const videoOptions = {
+    height: '315',
+    width: '560',
+    playerVars: {
+      autoplay: 0,
+    },
+  };
 
   return (
     <div className="carousel-container">
       <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
         <Carousel.Item>
           <div className="video-wrapper">
-            <video className="carousel-video" controls>
-              <source src={`${basePath}/plog.mp4`} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <YouTube videoId="sd2SzXcdwww" opts={videoOptions} className="carousel-video" />
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div className="video-wrapper">
-            <video className="carousel-video" controls>
-              <source src={`${basePath}/hopebabelikesmyorb.mp4`} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <YouTube videoId="_GjHFRpjevQ" opts={videoOptions} className="carousel-video" />
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div className="video-wrapper">
-            <video className="carousel-video" controls>
-              <source src={`${basePath}/videoGFX.mp4`} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <YouTube videoId="-yS6S4-LRBc" opts={videoOptions} className="carousel-video" />
           </div>
         </Carousel.Item>
       </Carousel>

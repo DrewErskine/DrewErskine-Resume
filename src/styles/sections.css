@@ -81,8 +81,7 @@
   gap: 2rem;
   width: 75%;
   margin: 0 auto;
-  margin-top: 25px;
-  margin-bottom: 200px;
+  margin-bottom: 25px;
   padding: 2rem;
 }
 
@@ -112,9 +111,12 @@
   background-color: var(--section-bg2);
   margin-top: 8%;
 }
-.skills-section,
-.certifications-section {
+.skills-section {
   background-color: var(--section-bg3);
+}
+
+.certifications-section {
+  background-color: var(--section-bg11);
 }
 
 /* Contact section container styling */
@@ -159,4 +161,23 @@
   font-size: 3rem;
   font-weight: bold;
   color: var(--primary-text);
+}
+
+.project-container {
+  padding: 3rem;
+  margin: 3rem auto;
+  width: calc(100% - var(--left-margin));
+  max-width: 75%;
+  border: 4px solid;
+  border-radius: 8px;
+  background-color: var(--section-bg);
+  margin-left: var(--left-margin);
+}
+
+/* Adjustments for responsive design */
+@media (max-width: 768px) {
+  .project-container, .section {
+    width: calc(100% - var(--left-margin));
+    padding: 2rem;
+  }
 }

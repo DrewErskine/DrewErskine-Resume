@@ -106,30 +106,32 @@ export default function Home() {
         >
           <Experience />
         </section>
+        <Projects currentProjectIndex={currentProjectIndex} />
         <div className="projects-carousel-container">
-          <section
-            id="projects"
-            ref={projectsRef}
-            className="section projects-section fade-in"
-          >
-            <Projects currentProjectIndex={currentProjectIndex} />
-          </section>
-          <section
-            id="carousel"
-            ref={carouselRef}
-            className="section-projects-carousel"
-          >
-            <ProjectCarousel onSlideChange={setCurrentProjectIndex} />
-          </section>
+          <Projects currentProjectIndex={currentProjectIndex} />
+          <ProjectCarousel onSlideChange={setCurrentProjectIndex} />
         </div>
+
         <div className="skills-certifications-container">
-          <section id="skills" ref={skillsRef} className="section half-section skills-section fade-in">
+          <section
+            id="skills"
+            ref={skillsRef}
+            className="section half-section skills-section fade-in"
+          >
             <Skills />
           </section>
-          <section id="certifications" ref={certificationsRef} className="section half-section certifications-section fade-in">
+        </div>
+
+        <div className="skills-certifications-container2">
+          <section
+            id="certifications"
+            ref={certificationsRef}
+            className="section half-section certifications-section fade-in"
+          >
             <Certifications />
           </section>
         </div>
+
         <section
           id="contact"
           ref={contactRef}

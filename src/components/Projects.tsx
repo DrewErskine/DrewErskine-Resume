@@ -1,3 +1,6 @@
+import '../styles/carousel.css'; // Assuming you are using the same CSS file
+
+
 interface ProjectsProps {
   currentProjectIndex: number;
 }
@@ -5,7 +8,7 @@ interface ProjectsProps {
 const projectDetails = [
   {
     title: "Project A",
-    description: "Developed a responsive e-commerce website using React and Redux.",
+    description: "Developed a responsive blog using React and Redux.",
     technologies: "React, Redux, Node.js, MongoDB"
   },
   {
@@ -24,7 +27,7 @@ function Projects({ currentProjectIndex }: ProjectsProps) {
   const project = projectDetails[currentProjectIndex];
 
   return (
-    <div>
+    <div className="section project-container">
       <h2 className="section-title">Projects</h2>
       <div className="project-details">
         <h3>{project.title}</h3>

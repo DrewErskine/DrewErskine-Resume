@@ -14,6 +14,7 @@
   --secondary-text: #021323; /* White text */
   --header-bg: #5D3A9B; /* Void Purple */
   --section-bg1: #f5d5e0; /* Pastel Purple */
+  --section-bg11: #66404d; /* Pastel Purple */
   --section-bg2: #b7c0ff; /* Deep Green */
   --section-bg3: #364d53; /* Pastel Pink */
   --section-bg4: #f5d5e0; /* Pale Turquoise */
@@ -74,7 +75,6 @@ button {
   outline-offset: 2px; /* Space between the button and outline */
 }
 
-
 button:hover {
   background-color: rgb(var(--primary-color));
 }
@@ -84,7 +84,6 @@ button:hover {
   color: var(--primary-color);
   font-weight: bold;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -99,4 +98,25 @@ html {
   font-size: 1.5rem; /* Adjusted font size for better readability */
   font-weight: 600; /* Make the text bold */
   margin: 0; /* Remove default margins */
+}
+
+/* Additional styling for the Projects and Carousel sections */
+.projects-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-container {
+  flex: 1;
+  max-width: 50%;
+}
+
+.carousel-container {
+  flex: 1;
+  max-width: 50%;
+  margin-top: 0;
 }
