@@ -39,7 +39,7 @@ function ProjectCarousel({ onSlideChange }: ProjectCarouselProps) {
         </Carousel.Item>
         <Carousel.Item>
           <div className="video-wrapper">
-            <YouTube videoId="-yS6S4-LRBc" opts={videoOptions} className="carousel-video" />
+            <YouTube videoId="_GjHFRpjevQ" opts={videoOptions} className="carousel-video" />
           </div>
         </Carousel.Item>
       </Carousel>

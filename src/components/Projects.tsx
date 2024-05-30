@@ -7,19 +7,19 @@ interface ProjectsProps {
 
 const projectDetails = [
   {
-    title: "Project A",
-    description: "Developed a responsive blog using React and Redux.",
-    technologies: "React, Redux, Node.js, MongoDB"
+    title: "Peep-Pea Blog Platform",
+    description: "A robust blogging platform built with Spring Boot, demonstrating modern Java development practices with a RESTful API, ensuring scalable and reliable content management.",
+    technologies: "SpringBoot 3, React, PostgreSQL, H2, MySQL, OAuth2, CRUD Operations"
   },
   {
-    title: "Project B",
-    description: "Developed a mobile application using React Native.",
-    technologies: "React Native, Redux, Firebase"
+    title: "Pokedex Explorer - https://drew-erskine.web.app/pokemon-search",
+    description: "A dynamic Pokedex application built with Node.js and Vue.js, featuring a real-time, interactive interface for exploring Pokémon, items, and moves, supporting user experience with both a CLI and web-based interfaces.",
+    technologies: "Node.js, Vue.js, Vite, Tailwind CSS, HTML, Firebase"
   },
   {
-    title: "Project C",
-    description: "Developed a real-time chat application.",
-    technologies: "React, Socket.io, Node.js"
+    title: "HexWrld",
+    description: "HexWrld is a dynamic Blender Geometry Nodes animation that exemplifies procedural generation and graphical computing. The project features a landscape made of hexagons and 2D grass, enhanced with vibrant lighting effects, demonstrating the capabilities of procedural content generation and the power of computer graphics for creating engaging visual environments.",
+    technologies: "Blender, Geometry Nodes, Shaders, Drivers, Value Keying, HTML, CSS, JavaScript, Firebase"
   }
 ];
 
