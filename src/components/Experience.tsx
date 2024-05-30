@@ -8,7 +8,7 @@ const Experience = () => {
       <div className="section-content">
         <ul>
           <li>
-            <h2><strong>Michigan High School Esports Federation</strong></h2>
+            <h1><strong>Michigan High School Esports Federation</strong></h1>
             <h3>Position: Full Stack Developer Intern</h3>
             <li>
               <p>-Developed and maintained full-stack solutions for MIHSEF, enhancing user experience and platform functionality based on user feedback and performance metrics. </p>

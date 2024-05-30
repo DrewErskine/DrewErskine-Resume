@@ -6,14 +6,14 @@ const Certifications = () => (
     <h2 className="section-title">Certifications</h2>
     <ul className="certifications-text">
       <li>
-        <h3>Certification A</h3>
-        <p>Info on Certification A</p>
+        <h3></h3>
+        <p></p>
       </li>
     </ul>
     <ul className="certifications-text">
       <li>
-        <h3>Certification B</h3>
-        <p>Info on Certification B</p>
+        <h3></h3>
+        <p></p>
       </li>
     </ul>
   </section>
