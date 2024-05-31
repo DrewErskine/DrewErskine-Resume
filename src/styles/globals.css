@@ -94,6 +94,12 @@ html {
   margin-bottom: 1rem; /* Space between list items */
 }
 
+.section-text h2 {
+  font-size: 3rem; /* Adjusted font size for better readability */
+  font-weight: 600; /* Make the text bold */
+  margin: 0; /* Remove default margins */
+}
+
 .section-text h3 {
   font-size: 1.5rem; /* Adjusted font size for better readability */
   font-weight: 600; /* Make the text bold */
