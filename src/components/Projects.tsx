@@ -25,6 +25,13 @@ const projectDetails = [
     technologies:
       "Blender, Geometry Nodes, Shaders, Drivers, Value Keying, HTML, CSS, JavaScript, Firebase",
   },
+  {
+    title: "Peep Pea Ponopoly",
+    description:
+      "PeepMonopoly is a full-stack application developed using Spring Boot 3 for the backend and React for the frontend. PeepMonopoly is designed to manage users and their autherized cash cards with functionalities like update, delete, and transfer and secure login.",
+    technologies:
+      "Java 21, Gradle, React, Jdbc, Jpa, PostgresSQL, Cors, Spring Boot3",
+  },
 ];
 
 function Projects({ currentProjectIndex }: ProjectsProps) {

@@ -29,7 +29,7 @@ function ProjectCarousel({ onSlideChange }: ProjectCarouselProps) {
       <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
         <Carousel.Item>
           <div className="video-wrapper">
-            <YouTube videoId="u7EFFxZ7kOc" opts={videoOptions} className="carousel-video" />
+            <YouTube videoId="zICphGXpneU" opts={videoOptions} className="carousel-video" />
           </div>
         </Carousel.Item>
         <Carousel.Item>
@@ -40,6 +40,11 @@ function ProjectCarousel({ onSlideChange }: ProjectCarouselProps) {
         <Carousel.Item>
           <div className="video-wrapper">
             <YouTube videoId="sd2SzXcdwww" opts={videoOptions} className="carousel-video" />
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="video-wrapper">
+            <YouTube videoId="u7EFFxZ7kOc" opts={videoOptions} className="carousel-video" />
           </div>
         </Carousel.Item>
       </Carousel>
