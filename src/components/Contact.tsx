@@ -48,7 +48,9 @@ const Contact = () => {
 
   return (
     <section className="section sectionContact">
-      <h2 className="section-title">Contact Me</h2>
+      <h2 className="section-title">Contact Me *UNDER CONSTRUCTION*</h2>
+      <h3> Please reach me directly here at - Dmerskine19@gmail.com </h3>
+      <h3>.</h3>
       <form className="section-content" onSubmit={handleSubmit} noValidate>
         <div className="mb-4">
           <label
