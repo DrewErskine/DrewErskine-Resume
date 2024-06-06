@@ -15,7 +15,7 @@ const projectDetails = [
   {
     title: "Pokedex Explorer - https://drew-erskine.web.app/pokemon-search",
     description:
-      "A dynamic Pokedex application built with Node.js and Vue.js, featuring a real-time, interactive interface for exploring Pokémon, items, and moves, supporting user experience with both a CLI and web-based interfaces.",
+      "A dynamic Pokedex application built with Vue.js, featuring a real-time, interactive interface for exploring Pokémon, items, and moves, supporting user experience with both a CLI and web-based interfaces.",
     technologies: "Node.js, Vue.js, Vite, Tailwind CSS, HTML, Firebase",
   },
   {
@@ -28,7 +28,7 @@ const projectDetails = [
   {
     title: "Peep Pea Ponopoly",
     description:
-      "PeepMonopoly is a full-stack application developed using Spring Boot 3 for the backend and React for the frontend. PeepMonopoly is designed to manage users and their autherized cash cards with functionalities like update, delete, and transfer and secure login.",
+      "PeepMonopoly is a full-stack application developed using Spring Boot 3 for the backend and React for the frontend. PeepMonopoly is designed to manage users and their autherized cash cards with functionalities like update, delete, transfer and secure login.",
     technologies:
       "Java 21, Gradle, React, Jdbc, Jpa, PostgresSQL, Cors, Spring Boot3",
   },
