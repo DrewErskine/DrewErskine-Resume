@@ -1,7 +1,6 @@
 # Project Name: Drew Erskine Portfolio
 
 ## Technologies Used
-
 - **React.js**
 - **Next.js**
 - **TypeScript**
