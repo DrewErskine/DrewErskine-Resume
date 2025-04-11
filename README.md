@@ -1,68 +1,100 @@
-# Project Name: Drew Erskine Portfolio
+# Drew Erskine Resume - Spring Boot + React Application
 
-## Technologies Used
-- **React.js**
-- **Next.js**
-- **TypeScript**
-- **JavaScript**
-- **Tailwind CSS**
-- **Git LFS**
-- **HTML**
-- **CSS**
-- **Google Fonts**
-- **Bootstrap**
-- **Vercel**
+This project is a personal portfolio website built with Next.js for the frontend and Spring Boot for the backend, using PostgreSQL for data storage.
 
-## Description
+## Technology Stack
 
-This project is a personal portfolio website built using React and Next.js. It aims to showcase my skills, projects, experience, and contact information in a visually appealing and responsive manner. The site is designed with modern web technologies and focuses on user interaction and accessibility.
+### Frontend
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Axios for API calls
 
----
+### Backend
+- Spring Boot 3
+- Spring Data JPA
+- PostgreSQL
+- Maven
+
+## Prerequisites
+
+- JDK 17 or later
+- Node.js 18 or later
+- npm or yarn
+- PostgreSQL 13 or later
+
+## Setup Instructions
+
+### Database Setup
+
+1. Install PostgreSQL if you haven't already
+2. Create a new PostgreSQL database:
+   ```sql
+   CREATE DATABASE drewerskine_resume;
+   ```
+3. The application will automatically create the necessary tables when it starts
+
+### Backend Setup
+
+1. Configure database connection in `src/main/resources/application.properties` (modify username and password as needed)
+2. Build the project using Maven:
+   ```bash
+   mvn clean install
+   ```
+3. Run the Spring Boot application:
+   ```bash
+   mvn spring-boot:run
+   ```
+   The backend will start on http://localhost:8080
+
+### Frontend Setup
+
+If you want to run the frontend separately during development:
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+   The frontend will be available at http://localhost:3000
+
+## Running the Full Application
+
+To run both frontend and backend as a single application:
+
+1. Build the entire application:
+   ```bash
+   mvn clean install
+   ```
+2. Run the Spring Boot application:
+   ```bash
+   mvn spring-boot:run
+   ```
+3. The application will be available at http://localhost:8080
 
 ## Features
 
-- **Responsive Design:** Adapts to various screen sizes for optimal viewing on any device.
-- **Interactive Navigation:** Smooth scrolling and transition effects enhance user experience.
-- **Project Carousel:** Displays projects in a carousel format with detailed descriptions and video previews.
-- **Customizable:** Easily change color schemes and typography to match personal preferences.
-- **Accessibility:** Designed with accessibility in mind to ensure a wide range of users can interact with the site.
-- **Bootstrap Integration:** Utilizes Bootstrap components for consistent styling and responsive behavior.
-- **Hosted on Vercel:** Deployed and hosted using Vercel for fast and reliable performance.
+- Responsive portfolio website with light/dark mode
+- Contact form with backend storage
+- Admin dashboard for managing contact form submissions
+- PostgreSQL database integration
 
-## Available Scripts
+## Admin Dashboard
 
-In the project directory, you can run:
-
-- `npm start`: Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-- `npm test`: Launches the test runner in the interactive watch mode.
-- `npm run build`: Builds the app for production to the `build` folder.
+The admin dashboard is available at `/admin/contacts` and allows you to:
+- View all contact form submissions
+- Mark submissions as read
+- Delete submissions
 
 ## Project Structure
 
-- **`src/`**: Contains all the source code.
-  - **`app/`**: Main application components and pages.
-    - `layout.tsx`: Defines the main layout of the application.
-    - `page.tsx`: Template for the home page, including navigation and various sections.
-  - **`components/`**: Reusable components for different sections.
-    - `About.tsx`: About section component.
-    - `Contact.tsx`: Contact section component.
-    - `Education.tsx`: Education section component.
-    - `Experience.tsx`: Experience section component.
-    - `Nav.tsx`: Navigation component.
-    - `ProjectCarousel.tsx`: Carousel component for displaying project videos.
-    - `Projects.tsx`: Projects section component.
-    - `Skills.tsx`: Skills section component.
-  - **`styles/`**: Global and component-specific styles.
-    - `globals.css`: Contains global styles, color schemes, and responsive design settings.
-    - `sections.css`: Styles specific to different sections of the portfolio.
-    - `headshot.css`: Styles specific to the headshot component.
-- **`public/`**: Publicly accessible files.
-  - **`projects/`**: Contains video files for project previews.
-
-## Contribution
-
-Contributions are welcome! Please fork the repository and open a pull request with your suggested changes. Ensure your code adheres to the project's coding standards and includes relevant tests.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+- `/src/main/java` - Java backend code
+- `/src/main/resources` - Configuration and static resources
+- `/src/` - Next.js frontend code
+- `/src/components` - Reusable React components
+- `/src/pages` - Next.js pages
+- `/src/styles` - CSS styles

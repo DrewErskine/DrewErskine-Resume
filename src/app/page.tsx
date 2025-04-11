@@ -1,20 +1,20 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Nav from "../components/Nav";
-import About from "../components/About";
+import AboutSection from "../components/AboutSection";
 import Education from "../components/Education";
 import Experience from "../components/Experience";
 import Skills from "../components/Skills";
-import Certifications from "../components/Certifications";
 import Contact from "../components/Contact";
 import Projects from "../components/Projects";
 import ProjectTech from "../components/ProjectTech";
 import ProjectCarousel from "../components/ProjectCarousel";
-import Headshot from "../components/Headshot";
+import ThemeToggle from "../components/ThemeToggle";
+import ThemeScript from "../components/ThemeScript";
 import "../styles/globals.css";
 import "../styles/nav.css";
 import "../styles/sections.css";
-import "../styles/headshot.css";
+import "../styles/aboutSection.css";
 import "../styles/carousel.css";
 
 export default function Home() {
@@ -25,7 +25,6 @@ export default function Home() {
   const projectTechRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
-  const certificationsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
@@ -38,7 +37,6 @@ export default function Home() {
       projectTechRef.current,
       carouselRef.current,
       skillsRef.current,
-      certificationsRef.current,
       contactRef.current,
     ];
 
@@ -73,7 +71,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center bg-deep-space text-white">
+    <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-[var(--section-bgvoid)] to-[var(--section-bg)] text-[var(--primary-text)]">
+      <ThemeToggle />
+      <ThemeScript />
       <Nav
         aboutRef={aboutRef}
         educationRef={educationRef}
@@ -85,16 +85,7 @@ export default function Home() {
         <section className="section name-section">
           <h1 className="name-title">Drew Erskine</h1>
         </section>
-        <div className="about-and-headshot-container">
-          <section
-            id="about"
-            ref={aboutRef}
-            className="section about-section fade-in"
-          >
-            <About />
-          </section>
-          <Headshot />
-        </div>
+        <AboutSection ref={aboutRef} />
         <section
           id="education"
           ref={educationRef}
@@ -125,16 +116,6 @@ export default function Home() {
           </section>
         </div>
 
-        <div className="skills-certifications-container2">
-          <section
-            id="certifications"
-            ref={certificationsRef}
-            className="section half-section certifications-section fade-in"
-          >
-            <Certifications />
-          </section>
-        </div>
-
         <section
           id="contact"
           ref={contactRef}
@@ -143,7 +124,7 @@ export default function Home() {
           <Contact />
         </section>
       </main>
-      <footer className="w-full py-4 bg-deep-space text-gray-300 text-center">
+      <footer className="w-full py-4 bg-[var(--header-bg)] text-[var(--primary-text)] text-center">
         <p>© 2023 Drew Erskine. All rights reserved.</p>
       </footer>
     </div>

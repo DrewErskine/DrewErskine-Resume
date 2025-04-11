@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,29 +6,80 @@
 
 /* :root variables for colors and spacing */
 :root {
-  --foreground-rgb: 255, 255, 255; /* White text */
+  /* Main color palette - Light mode */
   --primary-color: 74, 112, 92; /* Deep Green */
-  --secondary-color: 93, 58, 155; /* Void Purple */
+  --secondary-color: 93, 58, 155; /* Deep Purple */
   --accent-color: 197, 163, 255; /* Pastel Purple */
-  --primary-text: #ffffff; /* White text */
-  --secondary-text: #021323; /* White text */
-  --header-bg: #5D3A9B; /* Void Purple */
-  --section-bg1: #f5d5e0; /* Pastel Purple */
-  --section-bg11: #66404d; /* Pastel Purple */
-  --section-bg2: #b7c0ff; /* Deep Green */
-  --section-bg3: #364d53; /* Pastel Pink */
-  --section-bg4: #f5d5e0; /* Pale Turquoise */
-  --section-bg: #7c7886; /* Very pale blue */
-  --section-bgvoid: #0e0216; /* Very pale blue */
+  
+  /* Text colors - Light mode */
+  --primary-text: #333333; /* Dark text */
+  --secondary-text: #555555; /* Medium dark text */
+  
+  /* Background colors - Light mode */
+  --header-bg: #EBE1FF; /* Light purple */
+  --section-bg: #F7F7F7; /* Light gray */
+  --section-bg1: #E6EFF8; /* Light blue */
+  --section-bg11: #E0E8F5; /* Lighter blue */
+  --section-bg2: #E7F0E9; /* Light green */
+  --section-bg3: #E8F5EE; /* Mint green */
+  --section-bg4: #F1E8FF; /* Light lavender */
+  --section-bgvoid: #FFFFFF; /* White */
+  
+  /* Spacing */
   --base-indent: 0vw;  /* Base indentation */
   --step-indent: 2vw;  /* Step indentation */
+  
+  /* Font styling */
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Poppins', sans-serif;
+  --heading-weight: 600;
+  --body-weight: 400;
+  --letter-spacing: 0.2px;
+  --line-height: 1.6;
+}
+
+/* Dark mode colors */
+[data-theme='dark'] {
+  /* Main color palette - Dark mode */
+  --primary-color: 74, 112, 92; /* Deep Green */
+  --secondary-color: 93, 58, 155; /* Deep Purple */
+  --accent-color: 197, 163, 255; /* Pastel Purple */
+  
+  /* Text colors - Dark mode */
+  --primary-text: #ffffff; /* White text */
+  --secondary-text: #e0e0e0; /* Light gray text */
+  
+  /* Background colors - Dark mode */
+  --header-bg: #5D3A9B; /* Deep Purple */
+  --section-bg: #2E2A33; /* Dark gray-purple */
+  --section-bg1: #7367A0; /* Light purple */
+  --section-bg11: #5D4C80; /* Medium purple */
+  --section-bg2: #4A6B77; /* Teal blue */
+  --section-bg3: #4A6B58; /* Teal green */
+  --section-bg4: #8D7EB3; /* Lavender */
+  --section-bgvoid: #1E1A24; /* Very dark purple */
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 18, 18, 18;
-    --background-end-rgb: 24, 24, 24;
+  :root:not([data-theme='light']) {
+    /* Main color palette - Dark mode */
+    --primary-color: 74, 112, 92; /* Deep Green */
+    --secondary-color: 93, 58, 155; /* Deep Purple */
+    --accent-color: 197, 163, 255; /* Pastel Purple */
+    
+    /* Text colors - Dark mode */
+    --primary-text: #ffffff; /* White text */
+    --secondary-text: #e0e0e0; /* Light gray text */
+    
+    /* Background colors - Dark mode */
+    --header-bg: #5D3A9B; /* Deep Purple */
+    --section-bg: #2E2A33; /* Dark gray-purple */
+    --section-bg1: #7367A0; /* Light purple */
+    --section-bg11: #5D4C80; /* Medium purple */
+    --section-bg2: #4A6B77; /* Teal blue */
+    --section-bg3: #4A6B58; /* Teal green */
+    --section-bg4: #8D7EB3; /* Lavender */
+    --section-bgvoid: #1E1A24; /* Very dark purple */
   }
 }
 
@@ -56,27 +107,84 @@
 
 /* Global Styles */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--body-font);
+  font-weight: var(--body-weight);
   color: var(--primary-text);
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  background-color: var(--section-bgvoid);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: var(--heading-weight);
+  line-height: 1.3;
+  margin-bottom: 0.5em;
+}
+
+[data-theme='light'] h1, 
+[data-theme='light'] h2, 
+[data-theme='light'] h3, 
+[data-theme='light'] h4, 
+[data-theme='light'] h5, 
+[data-theme='light'] h6 {
+  color: #333;
+}
+
+[data-theme='light'] p, 
+[data-theme='light'] span, 
+[data-theme='light'] li {
+  color: #444;
+}
+
+[data-theme='light'] .section-title {
+  color: rgb(var(--secondary-color));
 }
 
 button {
-  background-color: var(--section-bg3);
+  background-color: rgba(var(--secondary-color), 0.8);
   color: var(--primary-text);
   padding: 8px 16px;
   border-radius: 2.375rem;
   font-weight: 600;
-  transition: background-color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   margin: 0;
-  outline: 2px solid var(--accent-color); /* New outline */
-  outline-offset: 2px; /* Space between the button and outline */
+  border: none;
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='light'] button {
+  background-color: rgba(var(--secondary-color), 0.7);
+  color: white;
+  outline: 2px solid rgba(74, 112, 92, 0.7);
+  box-shadow: 0 2px 6px rgba(74, 112, 92, 0.2);
+}
+
+[data-theme='dark'] button {
+  background-color: rgba(var(--secondary-color), 0.85);
+  outline: 2px solid rgba(var(--accent-color), 0.7);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 button:hover {
-  background-color: rgb(var(--primary-color));
+  background-color: rgba(var(--secondary-color), 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='light'] button:hover {
+  outline: 2px solid rgba(74, 112, 92, 0.9);
+  box-shadow: 0 4px 10px rgba(74, 112, 92, 0.25);
+}
+
+[data-theme='dark'] button:hover {
+  outline: 2px solid rgba(var(--accent-color), 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
 /* Highlighting specific text */
@@ -85,8 +193,17 @@ button:hover {
   font-weight: bold;
 }
 
+[data-theme='light'] .highlight {
+  color: rgb(74, 112, 92);
+}
+
+[data-theme='dark'] .highlight {
+  color: rgb(var(--primary-color));
+}
+
 html {
   scroll-behavior: smooth;
+  background-color: var(--section-bgvoid);
 }
 
 /* Text styles for section elements */
@@ -125,4 +242,61 @@ html {
   flex: 1;
   max-width: 50%;
   margin-top: 0;
+}
+
+/* Theme toggle button styles */
+.theme-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  border-radius: 50%;
+  background-color: rgba(var(--secondary-color), 0.8);
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+.theme-toggle-btn:hover {
+  transform: rotate(30deg);
+  background-color: rgba(var(--secondary-color), 1);
+}
+
+/* Transition for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Background pattern and gradients */
+[data-theme='light'] html {
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(var(--secondary-color), 0.02) 0%, transparent 200px),
+    radial-gradient(circle at 80% 70%, rgba(var(--primary-color), 0.02) 0%, transparent 200px);
+}
+
+[data-theme='dark'] html {
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(var(--accent-color), 0.08) 0%, transparent 200px),
+    radial-gradient(circle at 90% 80%, rgba(var(--secondary-color), 0.05) 0%, transparent 200px);
+}
+
+/* Transition for elements when switching themes */
+body, 
+section, 
+nav, 
+footer, 
+.carousel-container, 
+.project-container {
+  transition: 
+    background-color 0.4s ease-in-out,
+    color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }

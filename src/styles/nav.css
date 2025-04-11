@@ -1,39 +1,83 @@
 /* nav.css */
-.nav-item {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-link {
-  text-decoration: none;
-  font-size: 1rem;
-  color: var(--primary-text); /* Use a custom variable or define a color */
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.nav-link-active {
-  color: var(--accent-color); /* Use a custom variable or define a color for active links */
-  font-weight: bold;
-  border-bottom: 2px solid var(--accent-color); /* Add a border to indicate active link */
-}
-
-.nav-link:hover {
-  color: var(--accent-color); /* Use a custom variable or define a color for hover state */
-  background-color: rgba(0, 0, 0, 0.1); /* Add a background color on hover */
-}
-
 nav {
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 50;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] nav {
+  background-color: rgba(30, 26, 36, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover {
+  transform: translateY(-2px);
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--primary-text);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+[data-theme='light'] .nav-link {
+  color: #333;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--accent-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link-active .nav-link::after {
+  width: 70%;
+}
+
+.nav-link-active .nav-link {
+  font-weight: 600;
+  color: rgb(var(--secondary-color));
+}
+
+[data-theme='light'] .nav-link-active .nav-link {
+  color: rgb(93, 58, 155);
+}
+
+.nav-link:hover {
+  color: rgb(var(--secondary-color));
+  background-color: rgba(var(--accent-color), 0.1);
 }
 
 ul {
   display: flex;
   justify-content: space-around;
   padding: 1rem;
+  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }

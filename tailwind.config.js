@@ -10,9 +10,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'deep-space': '#121212',
-        'lighter-deep-space': '#181818',
-        'deep-green': '#4A705C',
+        'deep-space': '#2E2A33',
+        'lighter-deep-space': '#3A3540',
+        'deep-green': 'rgb(74, 112, 92)',
         'void-purple': '#5D3A9B',
         'pastel-purple': '#C5A3FF',
         'pastel-pink': '#FFB6C1',
@@ -20,9 +20,12 @@ module.exports = {
         'white': '#FFFFFF',
       },
       fontFamily: {
-        sans: ['Open Sans', 'Helvetica', 'Arial', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
+        sans: ['Poppins', 'Helvetica', 'Arial', 'sans-serif'],
+        heading: ['Montserrat', 'sans-serif'],
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      }
     },
   },
   plugins: [],
