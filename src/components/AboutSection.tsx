@@ -22,10 +22,10 @@ const AboutSection = forwardRef<HTMLDivElement, AboutSectionProps>((props, ref) 
             <h2 className="section-title">About Me</h2>
             <div className="section-content">
               <p>
-                Hello! I'm Drew Erskine, a driven Full Stack Developer from Grand Rapids, Michigan, 
+                Hello! I&apos;m Drew Erskine, a driven Full Stack Developer from Grand Rapids, Michigan, 
                 currently studying Computer Science at Grand Valley State University. 
                 I pride myself on creating robust platforms in SpringBoot with Dynamic React interfaces.
-                Passionate about merging technology with diverse fields, I'm eager to tackle new challenges 
+                Passionate about merging technology with diverse fields, I&apos;m eager to tackle new challenges 
                 and innovate. Check out my projects on GitHub and connect to explore collaborative 
                 opportunities! - <a href="https://github.com/dmerskine19" target="_blank" rel="noopener noreferrer">https://github.com/dmerskine19</a>
               </p>
